@@ -1,38 +1,58 @@
-.App {
+.main{
   text-align: center;
+  display:flex;
+  justify-content: center;
+  padding-top: 10px;
+  background-color: rgb(0, 0, 0);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.sub-main {
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 450px;
+  width:25%;  
+  padding-top: 30px;
+  border-radius: 60px;
+  background-color: rgb(0, 0, 0);
+  border-style:double;
+  border-color: red;
 }
-
-.App-link {
-  color: #61dafb;
+#submit_B
+{
+  background-color:rgb(0, 0, 0);
+  color:red;
+  border-radius: 50px;
+  font-size: larger;
+  border-style: double;
+  border-color: red;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width:100px;
+  height:50px;
+  margin:30px
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#login
+{
+  color:red;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#pass
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: start;
+  color: red;
+}
+#input{
+  border-radius:50px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: red;
+}
+#logo
+{
+  color: red;
+}
+#fp
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: end;
+  color: red;
 }
