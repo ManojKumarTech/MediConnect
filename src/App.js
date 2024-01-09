@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   return (
+    
     <>
     <h1 id="logo">Oppurtunity<br></br> Hub</h1>
     <div className="main">
