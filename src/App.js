@@ -11,7 +11,8 @@ function App() {
       <div className="sub-main">  
       
         <div>
-          <h1 id="login">Login</h1>
+
+          <h1 id="login">login</h1>
           <h5 id="pass">Email</h5>
           <input id="input"type="text" placeholder="Enter Email id"></input>
           <h5 id="pass">Password</h5>
