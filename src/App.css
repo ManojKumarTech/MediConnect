@@ -2,7 +2,7 @@
   text-align: center;
   display:flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 100px;
   background-color: white ;
 }
 .sub-main {
@@ -10,9 +10,9 @@
   align-items: center;
   justify-content: center;
   height: 450px;
-  width:25%;  
+  width:23%; 
   padding-top: 30px;
-  border-radius: 60px;
+  border-radius: 40px;
   background-color:white;
   border-style:double;
   border-color: green;
