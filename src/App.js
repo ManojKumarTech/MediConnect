@@ -18,7 +18,7 @@ function App() {
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     rel="stylesheet"
   />
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <header className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor:'lightgreen'}}>
     <a className="navbar-brand" href="#" style={{color:"green",fontSize:"30px"}}>
       MediConnect
     </a>
@@ -57,7 +57,7 @@ function App() {
         </li>
       </ul>
     </div>
-  </nav>
+  </header>
   {/* NavBar */}
     <div className="main">
       <div className="sub-main">
