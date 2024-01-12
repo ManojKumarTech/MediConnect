@@ -74,7 +74,7 @@ function App() {
           <input id="input"type="password" placeholder="Enter Password"></input><br></br>
           <h6 id="fp" >Forget Password ?</h6>
           <br></br>
-          <br></br>
+          
           <button type="button" className="btn btn-success">SUBMIT</button>
           </div>
       </div>
