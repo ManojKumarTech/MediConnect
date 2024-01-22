@@ -15,7 +15,7 @@ function Login() {
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     rel="stylesheet"
   />
-  <header className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor:'lightgreen'}}>
+  <header className="navbar navbar-expand-lg navbar-light bg-secondary" >
     <a className="navbar-brand" href="#" style={{color:"green",fontSize:"30px"}}>
       MediConnect
     </a>
