@@ -1,6 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import './login.css';
+
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import {auth} from './firebase/setup'
 
 function Login() {
+
+  const [phone,setphone] = useState("")
+  const [user,setuser] = useState(null)
+  const [otp,setotp] = useState("")
+
+  const sendOtp = async()=>{
+
+      try{
+
+      const recaptcha = new  RecaptchaVerifier(auth,"recaptcha",{})
+      const confirm = signInWithPhoneNumber(auth,phone,recaptcha)
+      console.log(confirm)
+      setuser(confirm)
+      }
+      catch(err){
+          console.log(err)
+      }
+  }
+
+  const VerifyOtp = async()=>{
+      try{
+              const data = await user.confirm(otp)
+              console.log(data)
+          }
+          catch(err){
+              console.log(err)
+          }
+  }
+
+
+
+
     return(
         <>
       <link
