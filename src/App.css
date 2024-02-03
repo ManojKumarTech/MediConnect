@@ -1,58 +1,60 @@
-.main{
+.main {
   text-align: center;
-  display:flex;
+  display: flex;
   justify-content: center;
   padding-top: 60px;
-  background-color: white ;
+  background-color: white;
 }
+
 .sub-main {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 425px;
-  width:23%;
+  width: 23%;
   padding-top: 30px;
   border-radius: 40px;
-  background-color:white;
-  border-style:double;
+  background-color: white;
+  border-style: double;
   border-color: green;
 }
-#submit_B
-{
-  background-color:white;
-  color:green;
+
+#submit_B {
+  background-color: white;
+  color: green;
   border-radius: 50px;
   font-size: larger;
   border-style: double;
   border-color: green;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  width:100px;
-  height:50px;
-  margin:30px
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100px;
+  height: 50px;
+  margin: 30px
 }
-#login
-{
-  color:green;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+
+#login {
+  color: green;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#pass
-{
-  font-family:Georgia, 'Times New Roman', Times, serif;
+
+#pass {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: start;
   color: green;
 }
-#input{
-  border-radius:50px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+
+#input {
+  border-radius: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: green;
 }
-#logo
-{
+
+#logo {
   color: green;
 }
-#fp
-{
-  font-family:Georgia, 'Times New Roman', Times, serif;
+
+#fp {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: end;
   color: green;
 }

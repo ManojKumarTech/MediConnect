@@ -8,34 +8,34 @@ import Thome from './pages/Thome';
 
 function App() {
   return (
-    
-    <BrowserRouter>
-    <Routes>
 
-      <Route
+    <BrowserRouter>
+      <Routes>
+
+        <Route
           path="/home"
           element={
-            <Thome/>
+            <Thome />
           }
-      />
+        />
 
-    <Route
-        path="/login"
-        element={
+        <Route
+          path="/login"
+          element={
             <Login />
-        }
-      />
-    
-    <Route
-        path="/footer"
-        element={
-          <Footer/>
-        }
-      />
+          }
+        />
 
-    </Routes>
+        <Route
+          path="/footer"
+          element={
+            <Footer />
+          }
+        />
+
+      </Routes>
     </BrowserRouter>
-);
+  );
 }
 
 export default App;
