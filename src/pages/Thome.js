@@ -51,6 +51,18 @@ function Thome() {
         </div>
       </header>
       {/* NavBar */}
+      <div style={{ marginTop: 30, marginLeft: 20 }}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248767.5435103323!2d79.96883869171141!3d13.036125802402088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266352b868e19%3A0x6ae71b3067534db1!2sApollo%20Spectra%20Hospital!5e0!3m2!1sen!2sin!4v1707372413988!5m2!1sen!2sin"
+          width={600}
+          height={450}
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+
+      </div>
 
     </>
 
