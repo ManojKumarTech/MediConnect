@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './pages/Footer';
 import Thome from './pages/Thome';
+import Sample from './pages/Sample';
 
 function App() {
   return (
@@ -32,6 +33,13 @@ function App() {
             <Footer />
           }
         />
+
+        <Route
+          path='/sample'
+          element={
+            <Sample/>
+          }
+          />
 
       </Routes>
     </BrowserRouter>
