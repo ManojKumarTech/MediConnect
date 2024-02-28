@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import react from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login from './pages/Login';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './pages/Footer';
+import Login from './pages/Login';
+import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
-import Sample from './pages/Sample';
+
 
 function App() {
   return (
