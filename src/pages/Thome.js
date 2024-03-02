@@ -1,10 +1,21 @@
 import React from "react";
-
+import { database } from "../firebase/setup";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Thome() {
+  const nav = useNavigate();
+
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    signOut(database).then(value => {
+      console.log(value, "Value");
+      nav("/");
+    });
+  }
+
   return (
     <>
-
 
       {/* NavBar */}
       <link
@@ -44,11 +55,12 @@ function Thome() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" style={{ color: "green", fontSize: "18px" }} >
-                Contact
+              <a className="nav-link" c style={{ color: "green", fontSize: "18px" }} >
+                Signout
               </a>
             </li>
           </ul>
+          <button onSubmit={handleSubmit}>Signout</button>
         </div>
       </header>
       {/* NavBar */}
@@ -66,9 +78,10 @@ function Thome() {
 
       </div>
 
+      <form onSubmit={handleSubmit}>
+        <button type="submit">Signout</button>
+      </form>
     </>
-
-  )
+  );
 }
-
-export default Thome;
+export default Thome

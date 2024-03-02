@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './pages/Footer';
-import Login from './pages/Login';
 import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
+import Registration from './pages/Registration';
 
 
 function App() {
@@ -13,16 +13,16 @@ function App() {
       <Routes>
 
         <Route
-          path=""
+          path="/home"
           element={
             <Thome />
           }
         />
 
         <Route
-          path="/login"
+          path=""
           element={
-            <Login />
+            <Registration />
           }
         />
 
