@@ -58,3 +58,23 @@
   text-align: end;
   color: green;
 }
+
+.row{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.signup{
+  padding-right: 20px;
+}
+.ac{
+  padding-top: 5px;
+  height: 30px;
+  width: 10%;
+  border: 2px solid gray;
+  cursor: pointer;
+  
+}
+.pointer{
+  cursor: pointer;
+}

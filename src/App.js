@@ -1,14 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './pages/Footer';
+import Registration from './pages/Registration';
 import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
-import Registration from './pages/Registration';
 
 
 function App() {
   return (
-
+    
+    
     <BrowserRouter>
       <Routes>
 
@@ -42,6 +43,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+
   );
 }
 

@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 function Registration() {
 
+
+
     const [login, setLogin] = useState(false)
 
     const nav = useNavigate()
@@ -19,7 +21,7 @@ function Registration() {
                 console.log(ab, "authData")
                 nav('/home')
             }
-            ).catch(err=>{
+            ).catch(err => {
                 alert(err.code)
                 setLogin(true)
             })
@@ -29,21 +31,28 @@ function Registration() {
                 console.log(ab, "authData")
                 nav('/home')
             }
-            ).catch(err=>{
+            ).catch(err => {
                 alert(err.code)
             })
         }
     }
 
     return (
-        <div className="App" style={{}}>
-            <h1>{login ? "SingIn" : "Signup"}</h1>
+        <div className="" style={{ textAlign: "center", marginTop: 30 }}>
+            <div className="row">
+                <div></div>
+                <div className={login == true ? 'ac' : 'pointer'} onClick={() => setLogin(true)}>SignIn</div>
+                <div className={login == false ? 'ac' : 'pointer'} onClick={() => setLogin(false)}>SignUp</div>
+                <div></div>
+            </div>
+            <br></br>
+
             <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
-                <input name="email" placeholder="Enter Email" />
-                <input name="password" type="password" placeholder="EnterPassword" />
+                <input name="email" placeholder="Enter Email" /><br></br><br></br>
+                <input name="password" type="password" placeholder="EnterPassword" /><br></br><br></br>
                 <button>{login ? "SingIn" : "Signup"}</button>
             </form>
-            <h1>Hello</h1>
+
 
         </div>
     )
