@@ -60,7 +60,7 @@ function Thome() {
               </a>
             </li>
           </ul>
-          <button onSubmit={handleSubmit}>Signout</button>
+          <button onClick={handleSubmit}>Mobile</button>
         </div>
       </header>
       {/* NavBar */}

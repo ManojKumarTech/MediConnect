@@ -59,22 +59,25 @@
   color: green;
 }
 
-.row{
+.row {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
 }
-.signup{
+
+.signup {
   padding-right: 20px;
 }
-.ac{
+
+.ac {
   padding-top: 5px;
-  height: 30px;
-  width: 10%;
+  height: 20px;
+  width: 5%;
   border: 2px solid gray;
   cursor: pointer;
-  
+
 }
-.pointer{
+
+.pointer {
   cursor: pointer;
 }
