@@ -57,7 +57,7 @@ function Registration() {
                 <input name="password" type="password" placeholder="EnterPassword" /><br></br><br></br>
                 <button>{login ? "SingIn" : "Signup"}</button>
             </form>
-            <a href="/sample"><h1>Sample</h1></a>
+            {/* <a href="/sample"><h1>Sample</h1></a> */}
 
 
         </div>
