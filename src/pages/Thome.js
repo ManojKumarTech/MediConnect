@@ -3,6 +3,7 @@ import { database } from "../firebase/setup";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+
 function Thome() {
   const nav = useNavigate();
 
@@ -18,10 +19,9 @@ function Thome() {
     <>
 
       {/* NavBar */}
-      <link
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        rel="stylesheet"
-      />
+      
+      
+
       <header className="navbar navbar-expand-lg navbar-light bg-secondary" >
         <a className="navbar-brand" href="#" style={{ color: "green", fontSize: "30px" }}>
           MediConnect
@@ -75,12 +75,16 @@ function Thome() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-
       </div>
 
       <form onSubmit={handleSubmit}>
         <button type="submit">Signout</button>
       </form>
+
+
+
+
+
       {/* Footer */}
   <footer className="text-center text-lg-start bg-body-tertiary text-muted">
     {/* Section: Social media */}
