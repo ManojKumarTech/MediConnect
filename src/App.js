@@ -5,12 +5,13 @@ import Registration from './pages/Registration';
 import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
 import Mobile from './pages/Mobile';
+import Bootstrap from './pages/Bootstrap';
 
 
 function App() {
   return (
-    
-    
+
+
     <BrowserRouter>
       <Routes>
 
@@ -38,16 +39,23 @@ function App() {
         <Route
           path='/sample'
           element={
-            <Sample/>
+            <Sample />
           }
-          />
+        />
 
-          <Route
-            path='/Mobile'
-            element={
-              <Mobile/>
-            }
-            />
+        <Route
+          path='/Mobile'
+          element={
+            <Mobile />
+          }
+        />
+
+        <Route
+          path='/bootstrap'
+          element={
+            <Bootstrap/>
+          }
+        />
 
       </Routes>
     </BrowserRouter>

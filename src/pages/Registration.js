@@ -17,7 +17,7 @@ function Registration() {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        if (a == 'signup') {
+        if (a === 'signup') {
             createUserWithEmailAndPassword(database, email, password).then(ab => {
                 console.log(ab, "authData")
                 nav('/home')
@@ -40,6 +40,7 @@ function Registration() {
 
     return (
         <div className="" style={{ textAlign: "center", marginTop: 30 }}>
+
             <div className="row">
                 <div></div>
                 <div></div>
@@ -59,8 +60,9 @@ function Registration() {
             </form>
             {/* <a href="/sample"><h1>Sample</h1></a> */}
 
-
         </div>
+
+
     )
 }
 export default Registration
