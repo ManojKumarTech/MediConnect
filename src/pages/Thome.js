@@ -2,6 +2,7 @@ import React from "react";
 import { database } from "../firebase/setup";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import '../images/apallo.jpg'
 
 
 function Thome() {
@@ -18,12 +19,12 @@ function Thome() {
   return (
     <>
 
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-  crossOrigin="anonymous"
-/>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossOrigin="anonymous"
+      />
 
       {/* NavBar */}
 
@@ -70,33 +71,52 @@ function Thome() {
       </header>
       {/* NavBar */}
 
-      <div style={{ marginTop: 30, marginLeft: 20 }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248767.5435103323!2d79.96883869171141!3d13.036125802402088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266352b868e19%3A0x6ae71b3067534db1!2sApollo%20Spectra%20Hospital!5e0!3m2!1sen!2sin!4v1707372413988!5m2!1sen!2sin"
-          width={600}
-          height={450}
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      {/*Body */}
+      <div className="d-flex justify-content-center">
+      <div className="card" style={{ width: "24rem" ,height:"34.5rem", marginTop: "20px" }}>
+        <div className="card-body">
+          <img className="w-100" src="https://lh5.googleusercontent.com/p/AF1QipPQzNE8Zj3hbV-C2mFpLgqIXavPHfoygNKpY__P=w408-h269-k-no"></img>
+          <div className="d-flex"></div>
+          <h5 className="card-title">Apollo Hospital</h5>
+          <p className="card-text">
+          Apollo Hospitals, Greams Road, Chennai, is India's first corporate hospital
+          inaugurated in 1983 by then Hon'ble President of India, Sri Zail Singh.
+          Established by the Founder and Chairman of Apollo Hospitals Group Dr. Prathap C.
+          </p>
+          <a href="#" className="btn btn-primary">
+           View medicine
+          </a>
+        </div>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <div style={{ marginLeft: 100, marginTop:"20px"}}>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248767.5435103323!2d79.96883869171141!3d13.036125802402088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266352b868e19%3A0x6ae71b3067534db1!2sApollo%20Spectra%20Hospital!5e0!3m2!1sen!2sin!4v1707372413988!5m2!1sen!2sin"
+          width={750}
+          height={550}
+          style={{ border:'2px',color:"blue" }}
+          
+          loading="lazy"
+          
+        />
+      </div>
+      </div>
+
+      {/*<form onSubmit={handleSubmit}>
         <button type="submit">Signout</button>
       </form>
 
+      {/*Body end*/}
 
-
-
-
+        
       {/* Footer */}
       <footer className="text-center text-lg-start bg-body-tertiary text-muted">
         {/* Section: Social media */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           {/* Left */}
           <div className="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
+            <span>Get connected with us on social networks :) ❤️</span>
           </div>
           {/* Left */}
           {/* Right */}
@@ -136,8 +156,7 @@ function Thome() {
                   MediConnect
                 </h6>
                 <p>
-                  Here you can use rows and columns to organize your footer content.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  the Smart Pharmacy Finder & Medication Ordering System represents a significant advancement in healthcare technology, improving accessibility, efficiency, and patient satisfaction in managing medication needs.
                 </p>
               </div>
               {/* Grid column */}
@@ -199,17 +218,17 @@ function Thome() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <i className="fas fa-home me-3" /> New York, NY 10012, US
+                  <i className="fas fa-home me-3" /> Chennai,AnnaNagar, India
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3" />
-                  info@example.com
+                  mediconnect@gmail.com
                 </p>
                 <p>
-                  <i className="fas fa-phone me-3" /> + 01 234 567 88
+                  <i className="fas fa-phone me-3" /> +91 98765 43210
                 </p>
                 <p>
-                  <i className="fas fa-print me-3" /> + 01 234 567 89
+                  <i className="fas fa-print me-3" /> +91 91234 56780
                 </p>
               </div>
               {/* Grid column */}

@@ -81,3 +81,83 @@
 .pointer {
   cursor: pointer;
 }
+
+
+.registration-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.registration-header {
+  display: flex;
+  justify-content: center;
+}
+
+.registration-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.registration-tab.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.registration-form {
+  margin-top: 20px;
+}
+
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.registration-card {
+  max-width: 300px;
+  margin: 100px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.registration-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.registration-button {
+  width: 30%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bg{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}

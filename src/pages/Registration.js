@@ -1,68 +1,50 @@
 import React, { useState } from "react";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { database } from "../firebase/setup";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from "react-router-dom";
 import '../App.css';
 
-
 function Registration() {
+    const [login, setLogin] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+    const nav = useNavigate();
 
-
-
-    const [login, setLogin] = useState(false)
-
-    const nav = useNavigate()
-
-    const handleSubmit = (e, a) => {
+    const handleSubmit = (e, action) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        if (a === 'signup') {
-            createUserWithEmailAndPassword(database, email, password).then(ab => {
-                console.log(ab, "authData")
-                nav('/home')
-            }
-            ).catch(err => {
-                alert(err.code)
-                setLogin(true)
-            })
-        }
-        else {
-            signInWithEmailAndPassword(database, email, password).then(ab => {
-                console.log(ab, "authData")
-                nav('/home')
-            }
-            ).catch(err => {
-                alert(err.code)
-            })
+
+        if (action === 'signup') {
+            createUserWithEmailAndPassword(database, email, password)
+                .then(() => nav('/home'))
+                .catch(err => setErrorMessage(err.message));
+        } else {
+            signInWithEmailAndPassword(database, email, password)
+                .then(() => nav('/home'))
+                .catch(err => setErrorMessage(err.message));
         }
     }
 
     return (
-        <div className="" style={{ textAlign: "center", marginTop: 30 }}>
+        <div style={{backgroundColor: "green"}} className="bg">
+            <div className="card registration-card">
+                <div className="card-header">
+                    <div className={`registration-tab ${!login ? 'active' : ''}`} onClick={() => setLogin(false)}>Sign Up</div>
+                    <div className={`registration-tab ${login ? 'active' : ''}`} onClick={() => setLogin(true)}>Sign In</div>
+                </div>
 
-            <div className="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div className={login == true ? 'ac' : 'pointer'} onClick={() => setLogin(true)}>SignIn</div>
-                <div className={login == false ? 'ac' : 'pointer'} onClick={() => setLogin(false)}>SignUp</div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div className="card-body">
+                    <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
+                        <input className="registration-input" name="email" placeholder="Enter Email" /><br /><br />
+                        <input className="registration-input" name="password" type="password" placeholder="Enter Password" /><br /><br />
+                        <button className="registration-button">{login ? "Sign In" : "Sign Up"}</button>
+                    </form>
+
+                    {errorMessage && <div className="error-message">{errorMessage}</div>}
+                </div>
             </div>
-            <br></br>
-
-            <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
-                <input name="email" placeholder="Enter Email" /><br></br><br></br>
-                <input name="password" type="password" placeholder="EnterPassword" /><br></br><br></br>
-                <button>{login ? "SingIn" : "Signup"}</button>
-            </form>
-            {/* <a href="/sample"><h1>Sample</h1></a> */}
-
         </div>
-
-
-    )
+    );
 }
-export default Registration
+
+export default Registration;
