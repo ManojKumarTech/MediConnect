@@ -17,16 +17,16 @@ function Registration() {
         if (action === 'signup') {
             createUserWithEmailAndPassword(database, email, password)
                 .then(() => nav('/home'))
-                .catch(err => setErrorMessage(err.message));
+                .catch(()=> setErrorMessage("Email Already in use !"));
         } else {
             signInWithEmailAndPassword(database, email, password)
                 .then(() => nav('/home'))
-                .catch(err => setErrorMessage(err.message));
+                .catch(()=> setErrorMessage("Email Id or PassWord is wrong !"));
         }
     }
 
     return (
-        <div style={{backgroundColor: "green"}} className="bg">
+        <div className="bg">
             <div className="card registration-card">
                 <div className="card-header">
                     <div className={`registration-tab ${!login ? 'active' : ''}`} onClick={() => setLogin(false)}>Sign Up</div>

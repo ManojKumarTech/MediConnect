@@ -6,6 +6,7 @@ import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
 import Mobile from './pages/Mobile';
 import Bootstrap from './pages/Bootstrap';
+import Bookingpage from './pages/Bookingpage';
 
 
 function App() {
@@ -28,6 +29,13 @@ function App() {
             <Registration />
           }
         />
+
+        <Route
+          path='/order'
+          element={
+            <Bookingpage/>
+          }
+          />
 
         <Route
           path="/footer"

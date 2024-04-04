@@ -1,40 +1,30 @@
-import { useState } from "react";
-import React from "react";
+import React from 'react';
 
-function Sample(){
-
-    const [like,setLike]=useState(0);
-    const [dislike,setDislike]=useState(1)
-    const [multi,setMultiply]=useState()
-
-    function Mul(e){
-        e.preventDefault()
-        
-        const a = e.target.a.value
-        const b = e.target.b.value
-
-        setMultiply(a*b)
-        
+// Define a higher-order component
+const withLogger = (WrappedComponent) => {
+  // Return a new component with added functionality
+  return class extends React.Component {
+    componentDidMount() {
+      console.log('Component mounted:', WrappedComponent.name);
     }
 
-    return(
-        <div style={{textAlign:"center"}}>
+    render() {
+      // Render the wrapped component with its original props
+      return <WrappedComponent {...this.props} />;
+    }
+  };
+};
 
-        <h1>Hello</h1>
-        <p>Manoj</p>
-        <button onClick={()=> setLike(like + 1)}>👍🏻{like}</button><br></br><br></br>
-        <button onClick={()=> setDislike(dislike+2)}>😵{dislike}</button>
-        <form onSubmit={Mul}>
-            <input name="a" type="number"></input>
-            <input name="b" type="number"></input>
-            <button>Multiply</button>
-        </form>
+// Create a component
+const MyComponent = (props) => {
+  return (
+    <div>
+      <h1>Hello, {props.name}!</h1>
+    </div>
+  );
+};
 
-        <h1>{multi}</h1>
-        <a href="/home"><h1>HOME</h1></a>
-        </div>
-        
-    )
-}
+// Enhance the component with the higher-order component
+const EnhancedComponent = withLogger(MyComponent);
 
-export default Sample
+export default EnhancedComponent;
