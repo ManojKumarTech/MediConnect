@@ -21,12 +21,18 @@ function Registration() {
         } else {
             signInWithEmailAndPassword(database, email, password)
                 .then(() => nav('/home'))
-                .catch(()=> setErrorMessage("Email Id or PassWord is wrong !"));
+                .catch(()=> setErrorMessage("Email Id or PassWord is wrong !"))
+                .then(console.error());
         }
     }
 
+
     return (
-        <div className="bg">
+        <>
+            <div className="centered-container">
+      <p>Welcome to mediconnect 💚😄</p>
+    </div>
+        <div className="bg" >
             <div className="card registration-card">
                 <div className="card-header">
                     <div className={`registration-tab ${!login ? 'active' : ''}`} onClick={() => setLogin(false)}>Sign Up</div>
@@ -44,6 +50,8 @@ function Registration() {
                 </div>
             </div>
         </div>
+        </>
+        
     );
 }
 

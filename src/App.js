@@ -1,12 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './pages/Footer';
+
 import Registration from './pages/Registration';
 import Sample from "./pages/Sample";
 import Thome from './pages/Thome';
 import Mobile from './pages/Mobile';
 import Bootstrap from './pages/Bootstrap';
 import Bookingpage from './pages/Bookingpage';
+import OrderPlacedPage from './pages/orderPlaced';
+import HomePage from './pages/Home';
+import MedicineList from './pages/MedicineList';
+import MedicineProp from './pages/MedicineProps';
 
 
 function App() {
@@ -17,7 +21,7 @@ function App() {
       <Routes>
 
         <Route
-          path="/home"
+          path="/hospitals"
           element={
             <Thome />
           }
@@ -33,14 +37,14 @@ function App() {
         <Route
           path='/order'
           element={
-            <Bookingpage/>
+            <Bookingpage />
           }
-          />
+        />
 
         <Route
-          path="/footer"
+          path="/medicines"
           element={
-            <Footer />
+            <MedicineProp />
           }
         />
 
@@ -59,9 +63,16 @@ function App() {
         />
 
         <Route
-          path='/bootstrap'
+          path='/home'
           element={
-            <Bootstrap/>
+            <HomePage />
+          }
+        />
+
+        <Route
+          path='/orderplaced'
+          element={
+            <OrderPlacedPage />
           }
         />
 

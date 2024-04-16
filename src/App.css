@@ -156,9 +156,28 @@
   cursor: pointer;
 }
 
-.bg{
-  height: 100vh;
+.bg {
+  display: flex;
+  justify-content: center; /* align horizontally */
+  align-items: center; /* align vertically */
+  height: 80vh;
   margin: 0;
   padding: 0;
 }
+
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+.centered-container p {
+  font-size: 24px;
+  text-align: center;
+}
+
 
