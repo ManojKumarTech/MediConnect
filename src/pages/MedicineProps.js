@@ -5,6 +5,7 @@ import Ibu from '../images/ibu.png';
 import Asp from '../images/asp.png';
 import Amo from '../images/Amo.png';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function MedicineProps() {
     // Sample list of medicines
@@ -154,10 +155,9 @@ function MedicineProps() {
 
     return (
         <div className="App">
-              
-
+            <Header/>
             <h1>Medicine List</h1>
-            <MedicineList medicines={medicines} />
+            <MedicineList  medicines={medicines} />
 
             <Footer/>
         </div>

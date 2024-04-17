@@ -11,6 +11,8 @@ import OrderPlacedPage from './pages/orderPlaced';
 import HomePage from './pages/Home';
 import MedicineList from './pages/MedicineList';
 import MedicineProp from './pages/MedicineProps';
+import FeedBack from './pages/FeedBack';
+import FeedbackSubmited from './pages/FeedbackSubmited';
 
 
 function App() {
@@ -42,6 +44,13 @@ function App() {
         />
 
         <Route
+          path='/medicines/order'
+          element={
+            <Bookingpage />
+          }
+        />
+
+        <Route
           path="/medicines"
           element={
             <MedicineProp />
@@ -49,9 +58,9 @@ function App() {
         />
 
         <Route
-          path='/sample'
+          path='/feedbacksubmited'
           element={
-            <Sample />
+            <FeedbackSubmited/>
           }
         />
 
@@ -73,6 +82,13 @@ function App() {
           path='/orderplaced'
           element={
             <OrderPlacedPage />
+          }
+        />
+
+        <Route
+          path='/feedback'
+          element={
+            <FeedBack />
           }
         />
 

@@ -51,7 +51,7 @@ function HomePage() {
                         <p className="card-text">
                             Give us more feedbacks to improve our Quality maximum!
                         </p>
-                        <a href="#" className="btn btn-primary">
+                        <a href="feedback" className="btn btn-primary">
                             Click Here
                         </a>
                     </div>

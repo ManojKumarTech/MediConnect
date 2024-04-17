@@ -1,17 +1,19 @@
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCFR1JZBAygLd2MnBrUxUTsLBwb5mFBtao",
-    authDomain: "mediconnect-authentications-07.firebaseapp.com",
-    projectId: "mediconnect-authentications-07",
-    storageBucket: "mediconnect-authentications-07.appspot.com",
-    messagingSenderId: "1088534469999",
-    appId: "1:1088534469999:web:74063e5c0823454aa91c9a",
-    measurementId: "G-RT4YXV7M07"
-};
+    apiKey: "AIzaSyBDosUxkQkizHJSPi_i8fo5Ye0NQILVAPU",
+    authDomain: "fir-auth-d2273.firebaseapp.com",
+    projectId: "fir-auth-d2273",
+    storageBucket: "fir-auth-d2273.appspot.com",
+    messagingSenderId: "590383500686",
+    appId: "1:590383500686:web:ec275f32fb9da643ee28df",
+    measurementId: "G-LN9TQDVQQS"
+  };
 
 
 const app = initializeApp(firebaseConfig);
 export const database = getAuth(app);
+export const db = getFirestore(app)

@@ -13,7 +13,7 @@ function Header() {
             {/* NavBar */}
 
             <header className="navbar navbar-expand-lg navbar-light bg-lightblue" >
-                <a className="navbar-brand" href="#" style={{ color: "green", fontSize: "30px" ,paddingLeft:"10px"}}>
+                <a className="navbar-brand" href="#" style={{ color: "blue", fontSize: "30px" ,paddingLeft:"10px"}}>
                     MediConnect
                 </a>
                 <button
@@ -30,22 +30,22 @@ function Header() {
                 <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="/home" style={{ color: "green", fontSize: "18px" }}>
-                                Home <span className="sr-only">(current)</span>
+                            <a className="nav-link" href="/home" style={{ color: "blue", fontSize: "18px" }}>
+                                Home 
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={{ color: "green", fontSize: "18px" }}>
+                            <a className="nav-link" href="#" style={{ color: "blue", fontSize: "18px" }}>
                                 About
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={{ color: "green", fontSize: "18px" }}>
+                            <a className="nav-link" href="#" style={{ color: "blue", fontSize: "18px" }}>
                                 Services
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/" style={{ color: "green", fontSize: "18px" }} >
+                            <a className="nav-link" href="/" style={{ color: "blue", fontSize: "18px" }} >
                                 Signout
                             </a>
                         </li>

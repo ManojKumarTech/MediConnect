@@ -35,7 +35,7 @@ function Thome() {
               inaugurated in 1983 by then Hon'ble President of India, Sri Zail Singh.
               Established by the Founder and Chairman of Apollo Hospitals Group Dr. Prathap C.
             </p>
-            <a href="/order" className="btn btn-primary">
+            <a href="/medicines" className="btn btn-primary">
               View medicine
             </a>
           </div>
