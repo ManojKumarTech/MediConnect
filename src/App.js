@@ -2,14 +2,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Registration from './pages/Registration';
-import Sample from "./pages/Sample";
+
 import Thome from './pages/Thome';
-import Mobile from './pages/Mobile';
-import Bootstrap from './pages/Bootstrap';
+
+
 import Bookingpage from './pages/Bookingpage';
 import OrderPlacedPage from './pages/orderPlaced';
 import HomePage from './pages/Home';
-import MedicineList from './pages/MedicineList';
+
 import MedicineProp from './pages/MedicineProps';
 import FeedBack from './pages/FeedBack';
 import FeedbackSubmited from './pages/FeedbackSubmited';
@@ -64,12 +64,6 @@ function App() {
           }
         />
 
-        <Route
-          path='/Mobile'
-          element={
-            <Mobile />
-          }
-        />
 
         <Route
           path='/home'

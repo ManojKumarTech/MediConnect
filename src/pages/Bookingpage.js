@@ -71,7 +71,7 @@ function MedicineOrderingPage() {
                 <form className="order-form">
                     <div className="form-group">
                         <label htmlFor="medicineName">Select Medicine:</label>
-                        <Select options={medicines} />
+                        <input options={medicines} onChange={(e)=>setMedi(e.target.value)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="quantity">Quantity:</label>
