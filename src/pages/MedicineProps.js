@@ -9,13 +9,13 @@ import Header from '../components/Header';
 
 function MedicineProps() {
     // Sample list of medicines
-    const medicines = [
+    const medicines = [ 
         {
             name: 'Paracetamol',
             price: '₹50',
             quantity: '10 tablets',
             manufacturer: 'ABC Pharmaceuticals',
-            image: ''
+            image: 'Para'
         },
         {
             name: 'Ibuprofen',

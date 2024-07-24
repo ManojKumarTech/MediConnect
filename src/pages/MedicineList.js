@@ -18,7 +18,7 @@ function MedicineList({ medicines }) {
                     </Link>
                     </div>
                 </div>
-            ))}
+            ))} 
         </div>
         </>
 

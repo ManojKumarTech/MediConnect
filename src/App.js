@@ -1,18 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
 import Registration from './pages/Registration';
-
 import Thome from './pages/Thome';
-
-
 import Bookingpage from './pages/Bookingpage';
 import OrderPlacedPage from './pages/orderPlaced';
 import HomePage from './pages/Home';
-
 import MedicineProp from './pages/MedicineProps';
 import FeedBack from './pages/FeedBack';
 import FeedbackSubmited from './pages/FeedbackSubmited';
+//import Portfolio from './pages/Portfolio';
 
 
 function App() {
@@ -85,6 +81,8 @@ function App() {
             <FeedBack />
           }
         />
+
+      
 
       </Routes>
     </BrowserRouter>

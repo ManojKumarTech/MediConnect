@@ -1,10 +1,10 @@
-import React from "react";
-import { database } from "../firebase/setup";
 import { signOut } from "firebase/auth";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../images/apallo.jpg'
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { database } from "../firebase/setup";
+import Apallo from '../images/apallo.jpg';
 
 
 function Thome() {
@@ -27,7 +27,7 @@ function Thome() {
       <div className="d-flex justify-content-center">
         <div className="card" style={{ width: "24rem", height: "34.5rem", marginTop: "20px" }}>
           <div className="card-body">
-            <img className="w-100" src="https://lh5.googleusercontent.com/p/AF1QipPQzNE8Zj3hbV-C2mFpLgqIXavPHfoygNKpY__P=w408-h269-k-no"></img>
+            <img className="w-100" src={Apallo}></img>
             <div className="d-flex"></div>
             <h5 className="card-title">Apollo Hospital</h5>
             <p className="card-text">
@@ -49,7 +49,7 @@ function Thome() {
             height={550}
             style={{ border: '2px', color: "blue" }}
             loading="lazy"
-            onClick={console.log([])}
+            onClick={console.log([])} 
 
           />
           
