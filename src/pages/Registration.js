@@ -17,11 +17,11 @@ function Registration() {
         if (action === 'signup') {
             createUserWithEmailAndPassword(database, email, password)
                 .then(() => nav('/home'))
-                .catch(()=> setErrorMessage("Email Already in use !"));
+                .catch(() => setErrorMessage("Email Already in use !"));
         } else {
             signInWithEmailAndPassword(database, email, password)
                 .then(() => nav('/home'))
-                .catch(()=> setErrorMessage("Email Id or PassWord is wrong !"))
+                .catch(() => setErrorMessage("Email Id or PassWord is wrong !"))
                 .then(console.error());
         }
     }
@@ -30,28 +30,28 @@ function Registration() {
     return (
         <>
             <div className="centered-container">
-      <p>Welcome to mediconnect 💚😄</p>
-    </div>
-        <div className="bg" >
-            <div className="card registration-card">
-                <div className="card-header">
-                    <div className={`registration-tab ${!login ? 'active' : ''}`} onClick={() => setLogin(false)}>Sign Up</div>
-                    <div className={`registration-tab ${login ? 'active' : ''}`} onClick={() => setLogin(true)}>Sign In</div>
-                </div>
+                <p>Welcome to mediconnect 💚😄</p>
+            </div>
+            <div className="bg" >
+                <div className="card registration-card">
+                    <div className="card-header">
+                        <div className={`registration-tab ${!login ? 'active' : ''}`} onClick={() => setLogin(false)}>Sign Up</div>
+                        <div className={`registration-tab ${login ? 'active' : ''}`} onClick={() => setLogin(true)}>Sign In</div>
+                    </div>
 
-                <div className="card-body">
-                    <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
-                        <input className="registration-input" name="email" placeholder="Enter Email" /><br /><br />
-                        <input className="registration-input" name="password" type="password" placeholder="Enter Password" /><br /><br />
-                        <button className="registration-button">{login ? "Sign In" : "Sign Up"}</button>
-                    </form>
+                    <div className="card-body">
+                        <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
+                            <input className="registration-input" name="email" placeholder="Enter Email" /><br /><br />
+                            <input className="registration-input" name="password" type="password" placeholder="Enter Password" /><br /><br />
+                            <button className="registration-button">{login ? "Sign In" : "Sign Up"}</button>
+                        </form>
 
-                    {errorMessage && <div className="error-message">{errorMessage}</div>}
+                        {errorMessage && <div className="error-message">{errorMessage}</div>}
+                    </div>
                 </div>
             </div>
-        </div>
         </>
-        
+
     );
 }
 
